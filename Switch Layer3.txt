@@ -1,25 +1,58 @@
-vlan 210
-vlan 220
-vlan 211
+vlan 10
+vlan 20
+vlan 30
+vlan 40
+vlan 50
+vlan 60
+vlan 70
+vlan 100
 exit
 
 
-int vlan 211
+int vlan 100
 no sh
-ip add 172.168.10.1 255.255.255.0
-ip helper-address 172.168.10.3
+ip add 192.168.10.1 255.255.255.0
+ip helper-address 192.168.10.6
 exit
 
-int vlan 210
+int vlan 10
 no sh
-ip add 172.168.1.1 255.255.255.0
-ip helper-address 172.168.10.3
+ip add 192.168.1.1 255.255.255.0
+ip helper-address 192.168.10.6
 exit
 
-int vlan 220
+int vlan 20
 no sh
-ip add 172.168.2.1 255.255.255.0
-ip helper-address 172.168.10.3
+ip add 192.168.2.1 255.255.255.0
+ip helper-address 192.168.10.6
 exit
 
+int vlan 30
+no sh
+ip add 192.168.3.1 255.255.255.0
+ip helper-address 192.168.10.6
+exit
 
+int vlan 40
+no sh
+ip add 192.168.4.1 255.255.255.0
+ip helper-address 192.168.10.6
+exit
+
+int vlan 50
+no sh
+ip add 192.168.5.1 255.255.255.0
+ip helper-address 192.168.10.6
+exit
+
+int vlan 60
+no sh
+ip add 192.168.6.1 255.255.255.0
+ip helper-address 192.168.10.6
+exit
+
+int vlan 70
+no sh
+ip add 192.168.7.1 255.255.255.0
+ip helper-address 192.168.10.6
+exit
