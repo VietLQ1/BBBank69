@@ -1,0 +1,25 @@
+vlan 210
+vlan 220
+vlan 211
+exit
+
+
+int vlan 211
+no sh
+ip add 172.168.10.1 255.255.255.0
+ip helper-address 172.168.10.3
+exit
+
+int vlan 210
+no sh
+ip add 172.168.1.1 255.255.255.0
+ip helper-address 172.168.10.3
+exit
+
+int vlan 220
+no sh
+ip add 172.168.2.1 255.255.255.0
+ip helper-address 172.168.10.3
+exit
+
+

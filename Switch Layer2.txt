@@ -1,0 +1,14 @@
+int fa0/24
+switchport mode trunk
+exit
+
+
+int range fa0/1-23
+switchport mode access
+switchport access vlan 100
+switchport port-security
+switchport port-security maximum 2
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+
+do wr
